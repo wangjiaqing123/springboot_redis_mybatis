@@ -27,7 +27,6 @@ public class controller {
         try {
             //怎么将返回指改为1回来问问
             redisTemplate.opsForValue().set(username,password);
-            System.out.println("能过来吗？");
             return userservice.save(us);
         } catch (Exception e) {
             System.out.println("添加数据失败");

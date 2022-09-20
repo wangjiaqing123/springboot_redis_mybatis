@@ -113,5 +113,30 @@
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.5.9" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:2.0.7" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.24" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-gateway:2.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter:2.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-context:2.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:5.7.3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-commons:2.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-rsa:1.0.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.64" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.64" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-gateway-core:2.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: io.projectreactor.addons:reactor-extra:3.4.8" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-webflux:2.7.3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-reactor-netty:2.7.3" level="project" />
+    <orderEntry type="library" name="Maven: io.projectreactor.netty:reactor-netty-http:1.0.22" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-http:4.1.79.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-http2:4.1.79.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver-dns:4.1.79.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-dns:4.1.79.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver-dns-native-macos:osx-x86_64:4.1.79.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver-dns-classes-macos:4.1.79.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.79.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-classes-epoll:4.1.79.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.projectreactor.netty:reactor-netty-core:1.0.22" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler-proxy:4.1.79.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-socks:4.1.79.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-webflux:5.3.22" level="project" />
   </component>
 </module>
