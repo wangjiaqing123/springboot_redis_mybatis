@@ -29,6 +29,7 @@ public class controller {
             redisTemplate.opsForValue().set(username,password);
             return userservice.save(us);
         } catch (Exception e) {
+            System.out.println("检查是不是redis没有打开");
             System.out.println("添加数据失败");
             return 100001;
         }
@@ -50,7 +51,7 @@ public class controller {
 
             if (pwd.equals(password)) {
                 System.out.println("success");
-                return 100001;//success100001
+                return 000001;//success100001
             } else {
                 return 200002;//密码错误200002
             }
