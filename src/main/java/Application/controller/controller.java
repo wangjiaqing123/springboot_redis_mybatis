@@ -1,9 +1,11 @@
 package Application.controller;
 
 
+import Application.service.Current_limiting;
+import Application.service.limiting;
 import Application.service.userservice;
 import Application.user.user;
-import com.alibaba.fastjson.JSONObject;
+import Application.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +13,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/web")
 public class controller {
+
+    @Autowired
+    private limiting limiting;
     @Autowired
     private userservice userservice;
 
@@ -18,45 +23,52 @@ public class controller {
     //这是必须加required = false不然会报错原因不知道
     private StringRedisTemplate redisTemplate;
 
+
     @PostMapping("/register")
-    public Integer save(@RequestBody user us) {
+    public Result save(@RequestBody user us) {
         String username = us.getUsername();
         String password = us.getPassword();
-        System.out.println(username);
-        System.out.println(password);
+        if(username==null){
+            return Result.user_null_error();
+        }
+        if(password==null){
+            return Result.user_null_error();
+        }
         try {
-            //怎么将返回指改为1回来问问
             redisTemplate.opsForValue().set(username,password);
-            return userservice.save(us);
+            userservice.save(us);
+            return Result.success();
         } catch (Exception e) {
-            System.out.println("检查是不是redis没有打开");
-            System.out.println("添加数据失败");
-            return 100001;
+            //如果这里一直错误检查是不是redis没有打开
+            return Result.register_error();
         }
 
     }
+
     @RequestMapping("/login")
-    public Integer redis(@RequestBody user us) {
+    public Result redis(@RequestBody user us) {
         String username = us.getUsername();
         String password = us.getPassword();
+        if(username==null){
+            return Result.user_null_error();
+        }
+        if(password==null){
+            return Result.user_null_error();
+        }
         redisTemplate.hasKey(username);
         //redis插入
         try {
             String pwd = redisTemplate.opsForValue().get(username);
-            System.out.println(pwd);
             if (redisTemplate.hasKey(username) == false) {
-                System.out.println("用户名错误");
-                return 200001;//用户名错误200001
+                return Result.username_error();
             }
-
             if (pwd.equals(password)) {
-                System.out.println("success");
-                return 000001;//success100001
+                return limiting.Current_limiting();
             } else {
-                return 200002;//密码错误200002
+                return Result.password_error();
             }
         } catch (Exception e) {
-            return 300001;//未知错误300001
+            return Result.unknow_error();
 
 
         }

@@ -1,5 +1,6 @@
 package Application.service;
 
+import Application.util.Result;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -7,9 +8,9 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class ResoureBlockHandler {
-    public static String dohandle(BlockException ex){
+public class Current_limiting {
+    public static Result forbid(BlockException ex){
         log.error("限流成功");
-        return "访问太频繁了,稍等片刻再访问";
+        return Result.service_error();
     }
 }
