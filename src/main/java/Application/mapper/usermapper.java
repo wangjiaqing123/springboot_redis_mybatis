@@ -11,7 +11,7 @@ import java.util.List;
 @Mapper
 public interface usermapper {
     //查询
-    @Select("select * from user")
+    @Select("select * from user where pages=1")
     List<user> FindALL();
 
     //增

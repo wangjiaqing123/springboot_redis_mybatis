@@ -17,7 +17,6 @@ public class userservice {
         return usermapper.FindALL();
     }
     public Integer save(user us){
-        System.out.println("添加数据成功");
 
 //        if (User.getUsername()==null){
 //            return usermapper.save(User);

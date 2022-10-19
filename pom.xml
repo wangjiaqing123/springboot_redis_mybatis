@@ -58,7 +58,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-
+            <version>1.18.24</version>
+<!--            这里需要将 Lombok 的版本换为 1.18.20 版本以上才能打包-->
         </dependency>
         <dependency>
         <groupId>com.alibaba.cloud</groupId>

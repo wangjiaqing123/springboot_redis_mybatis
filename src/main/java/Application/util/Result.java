@@ -58,6 +58,13 @@ public class Result implements Serializable {
         //如果这里一直错误检查
 
     }
+    public static Result mybatis_error(){
+        Result result=new Result();
+        result.setResultCode(ResultCode.mybatis_error);
+        return result;
+        //如果这里一直错误检查
+
+    }
     public static Result service_error(){
         Result result=new Result();
         result.setResultCode(ResultCode.service_error);

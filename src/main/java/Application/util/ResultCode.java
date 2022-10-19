@@ -9,9 +9,11 @@ public enum ResultCode {
     user_unknow_error(10003,"未知错误"),
     user_null_error(10004,"null错误"),
     //注册错误20001-29999
-    register_error(20001,"注册错误"),
+    register_error(20001,"注册错误,有可能redis出错"),
     //服务器错误30001-39999
-    service_error(30001,"服务器繁忙");
+    service_error(30001,"服务器繁忙"),
+    //数据库mybatis错误40001-49999
+    mybatis_error(40001,"mybatis出错");
 
 
     private Integer code;
