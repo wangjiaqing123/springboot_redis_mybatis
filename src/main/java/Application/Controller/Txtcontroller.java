@@ -1,7 +1,7 @@
-package Application.controller;
+package Application.Controller;
 
 
-import Application.service.txtservice;
+import Application.Service.Txtservice;
 import Application.user.txtCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/txt")
-public class txtcontroller {
+@RequestMapping("/v1/txt/pagas")
+
+public class Txtcontroller {
     @Autowired
-    private txtservice txtservice;
+    private Txtservice txtservice;
     private String page;
 
 
