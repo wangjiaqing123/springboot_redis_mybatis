@@ -10,7 +10,6 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Date;
 import java.util.Map;
 @Slf4j
-//11
 public class JwtUtil {
     private static final long EXPIRE_TIME = 120 * 60 * 1000;
     //EXPIRE_TIME 到期时间 过期5分钟
