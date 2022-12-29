@@ -5,6 +5,37 @@ import java.io.Serializable;
 public class Result implements Serializable {
     private Integer code;
     private String msg;
+    private Object data;
+    private Object username;
+    private Object password;
+
+    public Object getUsername() {
+        return username;
+    }
+
+    public void setUsername(Object username) {
+        this.username = username;
+    }
+
+    public Object getPassword() {
+        return password;
+    }
+
+    public void setPassword(Object password) {
+        this.password = password;
+    }
+
+
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
+
 
     public Integer getCode() {
         return code;
@@ -35,6 +66,22 @@ public class Result implements Serializable {
         Result result = new Result();
         result.setResultCode(ResultCode.success);
         return result;
+    }
+    public static Result success(Object data){
+        Result result = new Result();
+        result.setResultCode(ResultCode.success);
+        result.setData(data);
+        return result;
+
+    }
+    public static Result success(Object data,Object username,Object password){
+        Result result = new Result();
+        result.setResultCode(ResultCode.success);
+        result.setData(data);
+        result.setUsername(username);
+        result.setPassword(password);
+        return result;
+
     }
     public static Result username_error(){
         Result result= new Result();

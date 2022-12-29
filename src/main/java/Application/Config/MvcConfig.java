@@ -20,9 +20,9 @@ public class MvcConfig implements WebMvcConfigurer {
     //添加jwt拦截器
     @Override
     public  void addInterceptors(InterceptorRegistry registry){
-        registry.addInterceptor(jwtInyerceptor()).addPathPatterns("/wjq1/**");
-        registry.addInterceptor(jwtInyerceptor()).addPathPatterns("/wjq2/**");
-        //这里是控制路径
+        registry.addInterceptor(jwtInyerceptor()).addPathPatterns("/v1/txt/pages/**");
+        //列子:v1/txt/pages/**
+        //这里是控制路径可以多加
     }
 
 
